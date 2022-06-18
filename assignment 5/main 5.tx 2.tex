@@ -1,0 +1,48 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\title{Assignment 5 \\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
+\author{MALOTH DAVID \\ \normalsize CS21BTECH11035\\ \vspace*{20pt} \normalsize  june 4 \\ \vspace*{20pt} \Large paupolis PROBLEM 9.29}
+
+
+\begin{document}
+	% The title
+	\maketitle
+	
+	% The question
+	\textbf{(paupolis, Exercise 9.29 )} \textbf{(Paupolis chapter 9 ,ex 9.29 )} find $E\{y^2(t)\}$ a) If  $R_X_X(\tau) =5\delta(\tau)$ and y'(t)+2y(t) = X(t) all t. b) if i) holds for  t \textgreater 0 only and y(t)= 0 for  t $\leq$ 0
+	
+% Blocks frame
+\section{Solution}
+\begin{frame}{Solution}
+
+\begin{itemize}
+
+\item a) if y'(t)+2y(t) = X(t), then y(t) =x(t)*h(t)
+\item where h(t) = ${e^{-2t}}u(t)$ and with q(t)=5, (10-90) yields
+\item $E\{y^2(t)\}$ = 5*${e^{-4t}}U(T)$=5*$\int_0^\infty{e^{-4t}}d(\tau)$ =$\dfrac{5}{4}$
+\item b) as a) with q(t) = 5U(t).hence,for t \textgreater 0
+ 
+\item $E\{y^2(t)\}$ = $5U(t)*{e^{-4t}U(t)}$ =$5*\int_0^t{e^{-4t}d\tau}$ =$ \dfrac{5}{4}(1-{e^{-4t}}) $
+\item hence proved
+\end{itemize}
+    
+    
+\end{frame} 
+
+
+
+\end{document}
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Co
+
