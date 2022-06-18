@@ -1,0 +1,60 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\title{Assignment 4 \\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
+\author{MALOTH DAVID \\ \normalsize CS21BTECH11035\\ \vspace*{20pt} \normalsize  june 12 \\ \vspace*{20pt} \Large paupolis ex 9.28}
+
+
+\begin{document}
+	% The title
+	\maketitle
+	
+	% The question
+	\textbf{(paupolis Exercise 9.28)}  \textbf{(Papoulis chapter 9 ,ex 9.28 )} show that $R_X_X(t_1,t_2)$ =$q(t_1)\delta(t_1,t_2)$  $E\{y^2(t)\} = I(t)$  a) $y(t) = \int_0^I h(t,\alpha)X(\alpha)d\alpha $ then $I(t)=\int_0^I h^2(t,\alpha)q(\alpha)d\alpha$
+	b)$y'(t)+c(t)y(t)=x(t) then I'(t)+2c(t)I(t)=q(t)$
+
+% Blocks frame
+\section{Solution}
+\begin{frame}{Solution}
+
+\begin{itemize}
+
+\item a) $I(t) = E{\int_0^t\int_0^t h(t,\alpha)x(\alpha)h(t,\beta)x(\beta)d\alpha d\beta }$
+
+\item $I(t) = \int_0^t\int_0^t h(t,\alpha)h(t,\alpha) q(\alpha)\delta(\alpha -\beta)d\alpha d\beta =\int_0^t h^2(t,\alpha)q(\alpha)d\alpha$
+
+\item b) if $ y'(t)+c(t)y(t)=x(t)$ then y(t) is the output of a linear time varying system as in a) with impulse response h(t,$\alpha$) such that 
+
+\item $\dfrac{dh(t,\alpha)}{dt} + c(t)h(t,\alpha) = \delta(t-\alpha)$ ,  $h(\alpha^-,\alpha)=0$
+
+\item or equivalently
+$\dfrac{dh(t,\alpha)}{dt} + c(t)h(t,\alpha) = 0$ ,$ t \textgreater 0$ ,$h(\alpha^+,\alpha)=1$
+
+\item this yields
+$h(t,\alpha) = e^-{\int_a^t c(\tau)d\tau}$
+
+\item hence,if
+$I(t) = \int_0^t h^2(t,\alpha)q(\alpha)d\alpha$ then $ I'(t)+2c(t)I(t)=q(t)$ 
+\item because the impulse response of the of this equation equals
+$e^-{2\int_a^tc(\tau)d\tau} = h^2(t,\alpha)$
+\item hence proved
+\end{itemize}
+    
+    
+\end{frame} 
+
+
+
+\end{document}
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Co
